@@ -1,13 +1,10 @@
-// // components/Navbar.tsx
-
 "use client"; // Ensure this component is only rendered on the client side
 
-import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 const Navbar: React.FC = () => {
-  const router = useRouter();
-  const currentPath = router.pathname;
+  const currentPath = usePathname(); // Use usePathname to get the current path
 
   return (
     <nav className="bg-gray-800 p-4 shadow-md">
